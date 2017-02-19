@@ -1,6 +1,6 @@
 {
-  "name": "space-base",
-  "version": "0.0.3",
+  "name": "SpaceBase",
+  "version": "0.0.4",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -20,7 +20,6 @@
     "@angular/platform-browser": "^2.3.1",
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
-
     "angular-in-memory-web-api": "~0.2.4",
     "angularfire2": "^2.0.0-beta.7",
     "core-js": "^2.4.1",
@@ -30,11 +29,11 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^2.3.1",
+    "@angular/cli": "^1.0.0-beta.32.3",
+    "@angular/compiler-cli": "^2.4.0",
     "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.28.3",
-    "codelyzer": "~2.0.0-beta.1",
+    "@types/node": "^6.0.60",
+    "codelyzer": "~2.0.0-beta.4",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
