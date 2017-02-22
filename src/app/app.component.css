@@ -23,13 +23,14 @@ h2 {
   padding: 0;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
 }
+
 nav a {
   color: #fff;
   float: none;
   line-height: 56px;
   text-align: left;
   font-size: 14px;
-  padding: 0 30px;    
+  padding: 0 4%;    
   text-transform: uppercase;
   font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   font-weight: 400;

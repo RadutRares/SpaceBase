@@ -21,7 +21,8 @@ import { PlanetService } from './planet.service';
 import { PlanetSearchComponent } from './planet-search.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component'
-import { WeaponsComponent } from './weapons.component'
+import { WeaponsComponent } from './weapons.component';
+import { WeaponDetailComponent } from './weapon-detail/weapon-detail.component'
 
 export const firebaseConfig = {
     apiKey: "AIzaSyCl50N55EyCKpDCnmuJZxNGC6K4CJTjoDo",
@@ -47,6 +48,7 @@ export const firebaseConfig = {
   	DashboardComponent,
     PlanetSearchComponent,
     WeaponsComponent,
+    WeaponDetailComponent,
   ],
   providers: [
   	PlanetService

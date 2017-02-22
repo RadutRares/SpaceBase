@@ -5,6 +5,8 @@ import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'a
 export class Weapon {
 	name: string;
 	damage: string;
+  type: string;
+  producer: string;
 }
 
 @Component({
@@ -24,13 +26,13 @@ export class WeaponsComponent implements OnInit {
 
   isActive: boolean;
 
-  weaponsLocal: Weapon[] = [{name: "Roach", damage: "1d8+3 kn"},
-						{name: "Ghost", damage: "1d8+4 kn"}];
+  weaponsLocal: Weapon[] = [{name: "Roach", damage: "1d8+3 kn", type: "Pistol", producer: "Echelon"},
+						{name: "Ghost", damage: "1d8+4 kn", type: "Pistol", producer: "Echelon"}];
 
   ngOnInit(): void {
   	this.isActive = false;
   	if (this.isActive){
-		this.weapons = this.af.database.list('/Weapons');
+		  this.weapons = this.af.database.list('/Weapons');
   	}
 
   }
