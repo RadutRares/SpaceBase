@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
 .top-offset {
   height: 2em;
   font-size: 20px;
@@ -40,6 +38,7 @@ div.title {
   }
 }
 
+/* List Item Layout Styles */
 .list-item {
   color: white;
   background: #1976D2;

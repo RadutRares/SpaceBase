@@ -10,7 +10,6 @@ import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'a
 export class WeaponsComponent implements OnInit {
   title = 'Weapons Database';
   weapons: FirebaseListObservable<any[]>;
-  selectedWeapon: FirebaseObjectObservable<any>;
 
   constructor(
   	private af: AngularFire) {
