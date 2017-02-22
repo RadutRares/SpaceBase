@@ -8,37 +8,21 @@
 
 <!-- Hide on Mobile -->
 <div class="hide-on-mobile">
-  <table *ngIf="!isActive">
+  <table>
     <thead>
       <tr>
         <th class="text-center">Name</th>
         <th class="text-center">Damage</th>
         <th class="text-center">Type</th>
         <th class="text-center">Producer</th>
-        
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let weapon of weaponsLocal"  ><!--Add this, [routerLink]="['/detail', planet.id]"-->
-        <td class="text-center">{{weapon.name}}</td>
-        <td class="text-center">{{weapon.damage}}</td>
-        <td class="text-center">{{weapon.type}}</td>
-        <td class="text-center">{{weapon.producer}}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table *ngIf="isActive">
-    <thead>
-      <tr>
-        <th class="text-center">Name</th>
-        <th class="text-center">Damage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let weapon of weapons | async">
-        <td class="text-center"> {{ (weapon)?.Name}}</td>
-        <td class="text-center"> {{ (weapon)?.Dmg}}</td>
+      <tr *ngFor="let weapon of weapons | async" [routerLink]="['/weapondetail', weapon.$key]">
+        <td class="text-center">{{(weapon)?.name}}</td>
+        <td class="text-center">{{(weapon)?.dmg}}</td>
+        <td class="text-center">{{(weapon)?.type}}</td>
+        <td class="text-center">{{(weapon)?.prod}}</td>
       </tr>
     </tbody>
   </table>

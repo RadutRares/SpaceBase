@@ -1,3 +1,34 @@
 <p>
   weapon-detail works!
 </p>
+<h2>
+	Weapon: {{(weapon)?.name}}
+</h2>
+<h3>
+	The {{(weapon)?.name}}, provided by the {{(weapon)?.race}} producer, {{(weapon)?.prod}}.
+</h3>
+<h3>
+    Damage: This weapon deals {{(weapon)?.dmg}}, and has a {{(weapon)?.fm}}.
+ fire rate.
+</h3>
+<h3>
+	Armor Penetration: {{(weapon)?.ap}}, Critical Hit Severity Bonus: {{(weapon)?.crit}}.
+</h3>
+<h3>
+	Range: Range of preferred usage: {{(weapon)?.irng}}, and maximum range limit {{(weapon)?.mrng}}.
+</h3>
+<h3>
+	Weapon Magazine size: {{(weapon)?.clip}}, Weapon Reliability {{(weapon)?.rely}}.
+</h3>
+<h3>
+    Required Proficiency: {{(weapon)?.prof}}:{{(weapon)?.type}}.
+</h3>
+<h3>
+    The following special modifiers are applied to the {{(weapon)?.name}}:
+</h3>
+<h3>
+    {{(weapon)?.spec}}.
+ </h3>
+ <h3>
+ 	Misc: The {{(weapon)?.name}} weighs {{(weapon)?.weight}}, and is a Tech-Level {{(weapon)?.tech}} item.
+ </h3>
