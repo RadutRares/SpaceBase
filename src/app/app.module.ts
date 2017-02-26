@@ -23,7 +23,8 @@ import { PlanetSearchComponent } from './planet-search.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { WeaponsComponent } from './weapons/weapons.component';
 import { WeaponDetailComponent } from './weapon-detail/weapon-detail.component';
-import { ArmorComponent } from './armor/armor.component'
+import { ArmorComponent } from './armor/armor.component';
+import { CharacterCreationComponent } from './character-creation/character-creation.component'
 
 export const firebaseConfig = {
     apiKey: "AIzaSyCl50N55EyCKpDCnmuJZxNGC6K4CJTjoDo",
@@ -51,6 +52,7 @@ export const firebaseConfig = {
     WeaponsComponent,
     WeaponDetailComponent,
     ArmorComponent,
+    CharacterCreationComponent,
   ],
   providers: [
   	PlanetService

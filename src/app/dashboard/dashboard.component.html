@@ -13,5 +13,22 @@
 <planet-search></planet-search>
 
 <div [routerLink]="['/armor']">
-	<h3>Armor</h3> 
-</div>>
+	<h3>Take me to Armor!</h3> 
+</div>
+
+<div class="grid grid-pad">
+  <a *ngFor="let elem of armor | async" [routerLink]="['/armor']" class="col-1-4">
+    <div class="module planet">
+      <h4>{{elem?.name}}</h4>
+    </div>
+  </a>
+</div>
+<div>
+  Characters
+</div>
+
+<div>
+  <div class="module planet" [routerLink]="['/character']">
+  	<h4>Create a Character</h4>
+  </div>
+</div>

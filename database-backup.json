@@ -1,4 +1,5 @@
-[{ "weapons" :
+{ 
+ "weapons" :
   [{
     "race": "Human",
     "prod": "Echelon",
@@ -1172,9 +1173,8 @@
     "prof": "Military",
     "weight": 4,
     "tech": "***"
-  }]
-},
-{ "armor" : 
+  }],
+ "armor" : 
   [{
     "race": "Human",
     "prod": "Echelon",
@@ -1186,7 +1186,7 @@
     "me": 2,
     "spec": "",
     "slots": "oo",
-    "spd-mod": 0,
+    "spdmod": 0,
     "weight": 3,
     "tech": "**"
   }, {
@@ -1200,7 +1200,7 @@
     "me": 2,
     "spec": "",
     "slots": "oo",
-    "spd-mod": 0,
+    "spdmod": 0,
     "weight": 11,
     "tech": "**"
   }, {
@@ -1214,7 +1214,7 @@
     "me": 1,
     "spec": "",
     "slots": "oo",
-    "spd-mod": 0,
+    "spdmod": 0,
     "weight": 14,
     "tech": "**"
   }, {
@@ -1228,7 +1228,7 @@
     "me": 5,
     "spec": "",
     "slots": "o",
-    "spd-mod": -5,
+    "spdmod": -5,
     "weight": 27,
     "tech": "**"
   }, {
@@ -1242,7 +1242,7 @@
     "me": 2,
     "spec": "",
     "slots": "ooo",
-    "spd-mod": -5,
+    "spdmod": -5,
     "weight": 26,
     "tech": "**"
   },{
@@ -1256,7 +1256,7 @@
     "me": 3,
     "spec": "",
     "slots": "oo",
-    "spd-mod": -5,
+    "spdmod": -5,
     "weight": 22,
     "tech": "**"
   },{
@@ -1270,7 +1270,7 @@
     "me": 4,
     "spec": "",
     "slots": "oo",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 41,
     "tech": "**"
   },{
@@ -1284,7 +1284,7 @@
     "me": 7,
     "spec": "Archaic",
     "slots": "",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 60,
     "tech": "*"
   },{
@@ -1298,7 +1298,7 @@
     "me": 5,
     "spec": "Loud",
     "slots": "ooo",
-    "spd-mod": -20,
+    "spdmod": -20,
     "weight": 122,
     "tech": "**"
   },{
@@ -1312,7 +1312,7 @@
     "me": 1,
     "spec": "",
     "slots": "oo",
-    "spd-mod": 0,
+    "spdmod": 0,
     "weight": 1,
     "tech": "***"
   },{
@@ -1326,7 +1326,7 @@
     "me": 1,
     "spec": "",
     "slots": "ooo",
-    "spd-mod": 0,
+    "spdmod": 0,
     "weight": 6,
     "tech": "***"
   },{
@@ -1340,7 +1340,7 @@
     "me": 2,
     "spec": "",
     "slots": "oo",
-    "spd-mod": 0,
+    "spdmod": 0,
     "weight": 12,
     "tech": "***"
   },{
@@ -1354,7 +1354,7 @@
     "me": 2,
     "spec": "",
     "slots": "ooo",
-    "spd-mod": -5,
+    "spdmod": -5,
     "weight": 21,
     "tech": "***"
   },{
@@ -1368,7 +1368,7 @@
     "me": 3,
     "spec": "",
     "slots": "oo",
-    "spd-mod": -5,
+    "spdmod": -5,
     "weight": 21,
     "tech": "***"
   },{
@@ -1382,7 +1382,7 @@
     "me": 4,
     "spec": "",
     "slots": "ooo",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 42,
     "tech": "***"
   },{
@@ -1396,7 +1396,7 @@
     "me": 4,
     "spec": "",
     "slots": "ooo",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 62,
     "tech": "***"
   },{
@@ -1410,7 +1410,7 @@
     "me": 4,
     "spec": "",
     "slots": "o",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 53,
     "tech": "**"
   },{
@@ -1424,7 +1424,7 @@
     "me": 4,
     "spec": "",
     "slots": "o",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 63,
     "tech": "***"
   },{
@@ -1438,7 +1438,7 @@
     "me": 7,
     "spec": "Prototype, Overheat (3)",
     "slots": "oooo",
-    "spd-mod": -10,
+    "spdmod": -10,
     "weight": 1327,
     "tech": "****"
   },{
@@ -1452,7 +1452,7 @@
     "me": 3,
     "spec": "Prototype",
     "slots": "oo",
-    "spd-mod": 5,
+    "spdmod": 5,
     "weight": 115,
     "tech": "****"
   },{
@@ -1466,7 +1466,7 @@
     "me": 2,
     "spec": "Invisiblity",
     "slots": "ooo",
-    "spd-mod": 5,
+    "spdmod": 5,
     "weight": 140,
     "tech": "****"
   },{
@@ -1480,10 +1480,28 @@
     "me": 4,
     "spec": "",
     "slots": "oooo",
-    "spd-mod": 5,
+    "spdmod": 5,
     "weight": 152,
     "tech": "*****"
+  }],
+    "characters" :
+  [{
+    "name": "",
+    "race": "",
+    "class": "",
+    "weapons": [],
+    "armor": "",
+    "hp": "",
+    "religion": "",
+    "fate": "",
+    "str": "",
+    "std": "",
+    "msk": "",
+    "vit": "",
+    "agi": "",
+    "int": "",
+    "wis": "",
+    "cha": "",
+    "spec": []
   }]
-}]
-
-
+}

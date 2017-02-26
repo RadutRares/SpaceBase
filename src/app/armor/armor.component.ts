@@ -12,7 +12,7 @@ export class ArmorComponent implements OnInit {
   constructor(private af: AngularFire) { }
 
   ngOnInit() {
-  	this.armor = this.af.database.list('/1/armor');
+  	this.armor = this.af.database.list('/armor');
   }
 
 }

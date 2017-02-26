@@ -1,0 +1,25 @@
+{ "characters" :
+  [{
+    "name": "",
+    "race": "",
+    "class": "",
+    "weapons": [],
+    "armor": "",
+    "hp": "",
+    "religion": "",
+    "fate": "",
+    "str": "",
+    "std": "",
+    "msk": "",
+    "vit": "",
+    "agi": "",
+    "int": "",
+    "wis": "",
+    "cha": "",
+    "spec": []
+  }]
+}
+
+
+
+

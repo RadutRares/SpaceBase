@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WeaponsComponent } from './weapons/weapons.component';
 import { WeaponDetailComponent } from './weapon-detail/weapon-detail.component';
 import { ArmorComponent } from './armor/armor.component';
+import { CharacterCreationComponent } from './character-creation/character-creation.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
 	{ path: 'weapons', component: WeaponsComponent },
 	{ path: 'weapondetail/:id', component: WeaponDetailComponent },
 	{ path: 'armor', component: ArmorComponent },
+	{ path: 'character', component: CharacterCreationComponent }
 ];
 
 @NgModule({

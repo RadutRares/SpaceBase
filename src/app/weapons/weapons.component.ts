@@ -16,7 +16,7 @@ export class WeaponsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-		this.weapons = this.af.database.list('/0/weapons');
+		this.weapons = this.af.database.list('/weapons');
   }
 
 }

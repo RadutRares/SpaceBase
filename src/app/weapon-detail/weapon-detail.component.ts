@@ -23,7 +23,7 @@ export class WeaponDetailComponent implements OnInit {
 
   ngOnInit() {
 	this.route.params
-		.switchMap((params: Params) => this.af.database.object('/0/weapons/'+params['id']))
+		.switchMap((params: Params) => this.af.database.object('/weapons/'+params['id']))
     	.subscribe(weapon => this.weapon = weapon);
   }
 
