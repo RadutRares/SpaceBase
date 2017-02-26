@@ -1,12 +1,32 @@
 <div class="top-offset">
 </div>
 <div class="">
-	<h3> {{Stage}} </h3>
+	<h3> Character Creation </h3>
 </div>
 
-<h1>Create a Character</h1>
+<h1> {{stage}} </h1>
 <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
-  <div class="form-group">
+ 
+  <div class="form-group" [hidden]="currentPhase !== 'race'">
+  	<div *ngFor="let each of races">
+		<div class="choice" (click)="choose(each.race, 'race')"> 
+			<h3> {{each.race}} </h3>
+		</div>
+  		<h2> {{each.desc}} </h2>
+  	</div>
+  </div>
+
+  <div class="form-group" [hidden]="currentPhase !== 'class'">
+    <div *ngFor="let each of classes">
+		<div class="choice" (click)="choose(each.class, 'class')"> 
+			<h3> {{each.class}} </h3>
+		</div>
+  		<h2> {{each.desc}} </h2>
+  	</div>
+  </div>
+
+  <!-- After Class and Race Phase -->
+  <div class="form-group" [hidden]="currentPhase !== 'custom'">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name"
            required
@@ -17,46 +37,49 @@
       Name is required
     </div>
   </div>
-
-  <div class="form-group">
-    <label for="class">Choose a Class</label>
-    <select class="form-control" id="class"
-            required [(ngModel)]="model.class" name="class" #class="ngModel">
-      <option *ngFor="let elem of classes" [value]="elem">{{elem}}</option>
-    </select>
-    <div [hidden]="class.valid || class.pristine" class="alert alert-danger">
-      Class is required
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="race">Choose a Race</label>
-    <select class="form-control" id="race"
-            required [(ngModel)]="model.race" name="race" #race="ngModel">
-      <option *ngFor="let ra of races" [value]="ra">{{ra}}</option>
-    </select>
-    <div [hidden]="race.valid || race.pristine" class="alert alert-danger">
-      Race is required
-    </div>
-  </div>
   
-  <div class="form-group" >
+  <div class="form-group" [hidden]="currentPhase !== 'custom'">
     <label for="weight">Weight (Optional)</label>
     <input type="text" class="form-control" id="weight"
            [(ngModel)]="model.weight" name="weight">
   </div>
 
-  <div class="form-group" >
+  <div class="form-group" [hidden]="currentPhase !== 'custom'">
     <label for="age">Age (Optional)</label>
     <input type="text" class="form-control" id="age"
            [(ngModel)]="model.age" name="age">
   </div>
 
-  <!-- After First Phase -->
-  <div class="form-group" [hidden]="!firstPhase">
-    <label for="Age">Placeholder</label>
-    <input type="text" class="form-control" id="Age"
-           [(ngModel)]="model.Age" name="Age">
+  
+  <div class="form-group" [hidden]="currentPhase !== 'custom'">
+    <label for="religion">Religion</label>
+    <input type="text" class="form-control" id="religion"
+           [(ngModel)]="model.religion" name="religion">
+  </div>
+
+  <div class="form-group" [hidden]="currentPhase !== 'custom'">
+    <label for="fate">Fate and Sign</label>
+    <input type="text" class="form-control" id="fate"
+           [(ngModel)]="model.fate" name="fate">
+  </div>
+
+  <div class="form-group" [hidden]="currentPhase !== 'custom' || model.class !== 'Psionic'">
+    <label for="fate">Fate and Sign</label>
+    <input type="text" class="form-control" id="fate"
+           [(ngModel)]="model.fate" name="fate">
+  </div>
+
+
+  <div class="form-group" [hidden]="currentPhase !== 'stats'">
+    <label for="fate">Roll for Stats:</label>
+    <button type="button" class="btn btn-default" [disabled]="rolled" (click)="roll()">Roll!</button>
+    <div class="row"> 
+	    <div class="col-1-4" *ngFor="let each of stats">
+	    	<div class="stat">
+	    		<h3>{{each}} {{getStat(each)}}</h3>
+	    	</div>
+	    </div>
+    </div>
   </div>
 
   <!-- Other Functionality 
@@ -75,26 +98,15 @@
 	In the end, store character with all abilites
   -->
 
-
   <!-- Submit Buttons -->
-  <div [hidden]="firstPhase">
+  <div [hidden]="currentPhase !== 'custom' && currentPhase !== 'stats'">
   	<button type="button" class="btn btn-default"  (click)="nextPhase()">Next</button>
   </div>
 
-  <div [hidden]="!firstPhase">
+  <div [hidden]="currentPhase !== 'finish'">
+  	<button type="button" class="btn btn-default"  (click)="changeDetails()">Change Details</button>
   	<button type="submit" class="btn btn-success" [disabled]="!characterForm.form.valid"s>Submit</button>
   </div>
-
- <!-- NOT SHOWN IN DOCS -->
-  <div>
-    <hr>
-    Name via form.controls = {{showFormControls(characterForm)}}
-  </div>
- <!-- - -->
 </form>
 
-
-<p>
-  character-creation works!
-</p>
 
